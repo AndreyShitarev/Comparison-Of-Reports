@@ -191,14 +191,22 @@ def main(input_dir: str = INPUT_DIR):
 
 if __name__ == "__main__":
     folders = [
-        "output/base_analysis",
         "output/parallel_analysis",
         "output/sequential_analysis",
+        "output/base_prmpt_1",
+        "output/base_prmpt_2",
+        "output/base_prmpt_3",
+        "output/base_prmpt_4",
+        "output/base_prmpt_5",
+        "output/base_prmpt_6",
+        "output/base_prmpt_7",
+        "output/base_prmpt_8",
+        "output/base_prmpt_9",
     ]
 
     for folder in folders:
         score = main(folder)
         if score is not None:
-            print(f"{folder:<25} → {score:.3f}")
+            print(f"{folder:<25} - {score:.3f}")
         else:
-            print(f"{folder:<25} → ошибка")
+            print(f"{folder:<25} - ошибка")
