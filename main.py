@@ -13,7 +13,7 @@ MODEL = "deepseek-chat"
 ENDPOINT = f"{BASE_URL}/api/v1/networks/{MODEL}"
 
 ETALON_DIR = "etalons"
-INPUT_DIR = "input"
+INPUT_DIR = "transcripts"
 
 
 def load_jsons(folder):
@@ -197,8 +197,12 @@ def main(input_dir: str = INPUT_DIR):
 
     avg = sum(scores) / len(scores)
 
-    print(input_dir, avg)
+
+    return avg
 
 
 if __name__ == "__main__":
-    main()
+    parallel_analysis = main(r"output/parallel_analysis")
+    sequential_analysis = main(r"output/sequential_analysis")
+    print(parallel_analysis)
+    print(sequential_analysis)
