@@ -191,17 +191,9 @@ def main(input_dir: str = INPUT_DIR):
 
 if __name__ == "__main__":
     folders = [
-        "output/parallel_analysis",
-        "output/sequential_analysis",
-        "output/base_prmpt_1",
-        "output/base_prmpt_2",
-        "output/base_prmpt_3",
-        "output/base_prmpt_4",
-        "output/base_prmpt_5",
-        "output/base_prmpt_6",
-        "output/base_prmpt_7",
-        "output/base_prmpt_8",
-        "output/base_prmpt_9",
+
+        "output/mediumstrict100",
+
     ]
 
     for folder in folders:
